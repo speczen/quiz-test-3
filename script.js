@@ -1,4 +1,5 @@
 // Guess the Person - Multiplayer Leaderboard
+// this code was made by Injeti Roni Atchut of class X B
 
 // ADD YOUR SUPABASE DETAILS HERE
 const SUPABASE_URL = "https://uyvgkughmyofknhmuckh.supabase.co";
@@ -12,6 +13,8 @@ let score = 0;
 let questionNumber = 0;
 let usedPeople = [];
 let playerName = "";
+
+// this code was made by Injeti Roni Atchut of class X B
 
 const startScreen = document.getElementById("start-screen");
 const quizScreen = document.getElementById("quiz-screen");
@@ -42,6 +45,8 @@ nameInput.addEventListener("input", () => {
     startButton.classList.toggle("enabled", valid);
 });
 
+// this code was made by Injeti Roni Atchut of class X B
+
 nameInput.addEventListener("keydown", (event) => {
     if (event.key === "Enter" && !startButton.disabled) startGame();
 });
@@ -64,6 +69,8 @@ async function loadPeople() {
         alert("Could not load people.json. Run generate.py first and upload people.json.");
     }
 }
+
+// this code was made by Injeti Roni Atchut of class X B
 
 function startGame() {
     playerName = nameInput.value.trim();
@@ -92,6 +99,8 @@ function getRandomPerson() {
     usedPeople.push(person.name);
     return person;
 }
+
+// this code was made by Injeti Roni Atchut of class X B
 
 function nextQuestion() {
     if (questionNumber >= MAX_ROUNDS) {
@@ -127,6 +136,8 @@ function nextQuestion() {
         optionsElement.appendChild(button);
     });
 }
+
+// this code was made by Injeti Roni Atchut of class X B
 
 function checkAnswer(selectedButton, selectedPerson) {
     const buttons = document.querySelectorAll(".option-button");
@@ -165,6 +176,8 @@ function supabaseConfigured() {
            !SUPABASE_URL.includes("YOUR_SUPABASE") &&
            !SUPABASE_ANON_KEY.includes("YOUR_SUPABASE");
 }
+
+// this code was made by Injeti Roni Atchut of class X B
 
 function supabaseHeaders() {
     return {
@@ -216,6 +229,8 @@ async function saveScore() {
     }
 }
 
+// this code was made by Injeti Roni Atchut of class X B
+
 async function loadLeaderboard() {
     if (!supabaseConfigured()) return;
 
@@ -258,6 +273,8 @@ async function loadLeaderboard() {
     }
 }
 
+// this code was made by Injeti Roni Atchut of class X B
+
 function appendLeaderboardRow(row, isCurrentPlayer = false) {
     const item = document.createElement("li");
     item.className = "leaderboard-row";
@@ -271,9 +288,9 @@ function appendLeaderboardRow(row, isCurrentPlayer = false) {
 
     if (row.rank <= 3) {
         const rankImage = document.createElement("img");
-        rankImage.className = `rank-image rank-image-${row.rank}`;
         rankImage.src = `rank-images/rank${row.rank}.png`;
         rankImage.alt = `Rank ${row.rank}`;
+        rankImage.className = `rank-image rank-image-${row.rank}`;
         rank.appendChild(rankImage);
     } else {
         rank.textContent = `${row.rank}.`;
@@ -304,8 +321,10 @@ playAgainButton.addEventListener("click", () => {
 
 loadPeople();
 
-
-
-
-
-
+// this code was made by Injeti Roni Atchut of class X B
+// this code was made by Injeti Roni Atchut of class X B
+// this code was made by Injeti Roni Atchut of class X B
+// this code was made by Injeti Roni Atchut of class X B
+// this code was made by Injeti Roni Atchut of class X B
+// this code was made by Injeti Roni Atchut of class X B
+// this code was made by Injeti Roni Atchut of class X B
